@@ -8,9 +8,9 @@
 <body>
 <div class="clock">    
   <div class="clockFace">
-    <div class="hand hourHand"></div>
+    <div class="hand hourHand" style="height: 9px;"></div>
     <div class="hand minHand"></div>
-    <div class="hand secHand"></div>
+    <div class="hand secHand" style="background: rgb(74, 243, 74); height: 2px"></div>
   </div>
 </div> 
 
@@ -59,6 +59,12 @@ body {
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
 
+    .hourHand {
+      width: 25%!important;
+      height: 9px;
+      margin-left: 25%;    
+    }
+
     .hand {
       width: 50%;
       height: 6px;
@@ -93,13 +99,11 @@ body {
     const secondsDegree = ((seconds / 60) * 360) + 90
     secondHand.style.transform = `rotate(${secondsDegree}deg)`;
 
-
-
-
     console.log(hours, minutes, seconds)
   };
 
   setInterval(setDate, 1000);
+  
 </script>
 
 </body>
