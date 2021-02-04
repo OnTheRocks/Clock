@@ -6,7 +6,7 @@
   <title>My Clock</title>
 </head>
 <body>
-<div class="">    
+<div class="clock">    
   <div class="clockFace">
     <div class="hand hourHand"></div>
     <div class="hand minHand"></div>
@@ -18,15 +18,58 @@
 
 <style>
 
-body {
-  background-color: #000000;
+
+html {
+  text-align: center;
   /* background-image: url(../assets/images/main.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.4;
-  padding-bottom:60px;
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  
   }
+
+  .clock {
+    width: 30rem;
+      height: 30rem;
+      border: 10px solid rgb(0, 128, 0);
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      /* box-shadow:
+        0 0 0 4px rgba(0,128,0,0.1),
+        inset 0 0 0 3px green,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,128,0,0.2); */
+      box-shadow: 0 0 200px 2px rgba(0,128,0);  
+  
+  }
+
+  .clockFace {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: green;
+      position: absolute;
+      top: 50%;
+    }
 
 </style>
