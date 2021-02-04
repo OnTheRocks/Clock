@@ -75,8 +75,9 @@ body {
   
 <script>
 
-  const secondHand = document.querySelector('.secHand');
+  const hoursHand = document.querySelector('.hourHand');
   const minuteHand = document.querySelector('.minHand');
+  const secondHand = document.querySelector('.secHand');
   function setDate()  {
     const now = new Date();
     // HOURS
@@ -95,7 +96,7 @@ body {
 
 
 
-    console.log(minutes, seconds)
+    console.log(hours, minutes, seconds)
   };
 
   setInterval(setDate, 1000);
